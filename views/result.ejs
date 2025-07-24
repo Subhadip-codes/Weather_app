@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Result</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <% if (weather) { %>
+      <h2 class="title">☁️ Weather in <%= weather.city %></h2>
+      <img class="icon" src="<%= weather.icon %>" alt="Weather Icon">
+      <p class="info">🌡️ Temperature: <strong><%= weather.temp %>°C</strong></p>
+      <p class="info">🔍 Condition: <strong><%= weather.description %></strong></p>
+    <% } else { %>
+      <h2 class="error"><%= error %></h2>
+    <% } %>
+    <a class="back-link" href="/">⏪ Back</a>
+  </div>
+</body>
+</html>
